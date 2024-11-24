@@ -9,6 +9,7 @@ require("dotenv").config();
 const bookRoutes = require("./src/books/book.route.js");
 const orderRoutes = require("./src/orders/order.route.js");
 const userRoutes = require("./src/users/user.route.js");
+const adminRoutes = require("./src/stats/admin.stats.js");
 
 const DB_URL = process.env.DB_URL;
 
@@ -18,11 +19,12 @@ async function main() {
   await mongoose.connect(DB_URL);
 }
 
-// routes
+// routes ...
 
 app.use("/api/books", bookRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/auth", userRoutes);
+app.use("/api/admin", adminRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World! 5558899009");
