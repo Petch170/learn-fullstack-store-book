@@ -101,3 +101,8 @@ register createUserWithEmailAndPassword(auth, email, password)
 มาจาก https://firebase.google.com/docs/auth/web/start?hl=th
 
 #pnpm install axios
+
+
+
+24/11/67 
+dashboard isn't complete

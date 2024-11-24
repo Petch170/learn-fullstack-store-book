@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import OrderPage from "../redux/features/book/OrderPage";
 import AdminRoute from "./AdminRoute";
 import AdminLogin from "../components/AdminLogin";
+import { DashboardLayout } from "../pages/dashboard/DashboardLayout";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -27,10 +28,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: "/about",
-        element: <h1>aboutHome</h1>,
-      },
+
       {
         path: "/login",
         element: <Login />,
@@ -66,7 +64,7 @@ export const router = createBrowserRouter([
     element: (
       <AdminRoute>
         {" "}
-        <div>Admin dashboard</div>
+        <DashboardLayout />
       </AdminRoute>
     ),
     children: [
